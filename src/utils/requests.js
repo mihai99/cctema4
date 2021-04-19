@@ -1,6 +1,6 @@
 // const serverUrl = "http://localhost:8080";
 import { graphConfig } from "./authConfig";
-const serverUrl = "https://cc-tema-3-3cce5.ew.r.appspot.com";
+const serverUrl = "http://localhost:8080";
 
 export const post = (path, body) => {
   return fetch(serverUrl + path, {
