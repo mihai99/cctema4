@@ -47,7 +47,7 @@ export default function Dashboard() {
             />
           </label>
           <div>
-            <button type="submit">Create a board -></button>
+            <button type="submit">Create a board </button>
           </div>
         </form>
       </div>
