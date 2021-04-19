@@ -8,13 +8,10 @@ import UniqueBoard from "./components/UniqueBoard";
 import { AuthenticatedTemplate, UnauthenticatedTemplate, useMsal } from "@azure/msal-react";
 import { loginRequest } from "./utils/authConfig";
 import Navbar from "./components/Navbar";
+import NotSignedIn from "./components/NotSignedIn";
 
 function App() {
  const { instance } = useMsal()
-
-  const handleLogin = () => {
-    instance.loginPopup(loginRequest).catch(e => console.log(e))
-  }
 
   return (
     <div className="wrapper" style={{ height: "100%" }}>
@@ -36,8 +33,7 @@ function App() {
         </BrowserRouter>
       </AuthenticatedTemplate>
       <UnauthenticatedTemplate>
-        <h4>Please log in</h4>
-        <button onClick={() => handleLogin()}>Log in</button>
+        <NotSignedIn />
       </UnauthenticatedTemplate>
     </div>
   );
