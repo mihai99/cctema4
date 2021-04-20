@@ -14,7 +14,8 @@ export const msalConfig = {
     auth: {
         clientId: "20b25dfb-f25b-413d-aa04-133a96b49af2",
         authority: "https://login.microsoftonline.com/consumers",
-        redirectUri: "http://localhost:3000/"
+        redirectUri: "https://cc-tema-4-zure.azurewebsites.net/",
+        postLogoutRedirectUri: "https://cc-tema-4-zure.azurewebsites.net/"
     },
     cache: {
         cacheLocation: "sessionStorage", // This configures where your cache will be stored
