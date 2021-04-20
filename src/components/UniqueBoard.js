@@ -64,7 +64,7 @@ export default function UniqueBoard() {
           <div className="post" key={post?.title}>
             <h3>{post?.title}</h3>
             <p>{post?.body}</p>
-            <img src={post.url} className ="myimg"></img>
+            {post.url && <img src={post.url} className ="myimg"></img>}
           </div>
         );
         postsHtml.push(postHtml);
