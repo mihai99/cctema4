@@ -1,13 +1,8 @@
 // const serverUrl = "http://localhost:8080";
 import { graphConfig } from "./authConfig";
-<<<<<<< HEAD
 // const serverUrl = "https://cc-tema-3-3cce5.ew.r.appspot.com";
 const serverUrl = "http://localhost:8080"
 const axios = require('axios')
-=======
-const serverUrl = "http://localhost:8080";
-
->>>>>>> bff1ee731d77ec09857e5e14e25c2ab52c83925d
 export const post = (path, body) => {
   return fetch(serverUrl + path, {
     method: "POST",
