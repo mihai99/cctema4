@@ -44,6 +44,7 @@ export default function UniqueBoard() {
         if (result && result.posts) {
           await Promise.all(
              result.posts.map(async e=>{
+               console.log("ids", e.file_id)
                e.url =await getFile(':'+e.file_id)
                return e
           }))

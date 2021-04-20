@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "./Dashboard.scss";
 import { callMsGraph, get, post } from "../utils/requests";
 import { useMsal } from "@azure/msal-react";
 import { loginRequest } from "../utils/authConfig";
-
 export default function Dashboard() {
   const [boardName, setBoardName] = useState("");
   const [boardDescription, setboardDescription] = useState("");
@@ -14,6 +13,7 @@ export default function Dashboard() {
   const {instance, accounts} = useMsal();
   const history = useHistory();
 
+  
   useEffect(() => {
     if (accounts[0]) {
       instance
@@ -46,6 +46,7 @@ export default function Dashboard() {
       })
     }
   }, [id])
+
   const createBoard = async (e) => {
     e.preventDefault();
     try {
